@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3f8b94488709caffd1abb941bd7d58b377736c76\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Cae.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ef0ee949e1d31ef5a195e68f1da3f0036a489190">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\2\Cae_f6a7ad957ba2f3e849b06b69eadc364d1bb76eb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dbebd447726b8eea4bb54164f857d02509ad59b7">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ebe05fc6120584cde45d86f4a0f2de5f9c9165c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\liyunzhi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_5887cb097d20dc10cdb8ac7f0efd82159f09fd1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\AlsaRecorder.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b5b9de231f71121a214746185d60b9f90cab565">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\2\AlsaRecorder_07f85a7b068978f17e3fb8aded4184e43e302b28\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Msc.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e3f2833a2105e4969d12274b94702d7c4047df3">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_234512b9b5ce1433c6092026c01dbe4c04bb1a7a\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Msc.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e3f2833a2105e4969d12274b94702d7c4047df3">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\Msc_234512b9b5ce1433c6092026c01dbe4c04bb1a7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\AlsaRecorder.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b5b9de231f71121a214746185d60b9f90cab565">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\AlsaRecorder_07f85a7b068978f17e3fb8aded4184e43e302b28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\liyunzhi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_5887cb097d20dc10cdb8ac7f0efd82159f09fd1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Cae.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ef0ee949e1d31ef5a195e68f1da3f0036a489190">
+        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\Cae_f6a7ad957ba2f3e849b06b69eadc364d1bb76eb8.jar" />
+    </item>
+
+</items>

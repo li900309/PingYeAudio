@@ -1,0 +1,13 @@
+#Wed Jun 14 18:04:52 CST 2017
+renamed.3=classes3.dex
+renamed.2=classes.dex
+renamed.1=classes2.dex
+renamed.0=classes4.dex
+base.3=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Cae_f6a7ad957ba2f3e849b06b69eadc364d1bb76eb8
+base.2=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_5887cb097d20dc10cdb8ac7f0efd82159f09fd1a
+base.1=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\AlsaRecorder_07f85a7b068978f17e3fb8aded4184e43e302b28
+base.0=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Msc_234512b9b5ce1433c6092026c01dbe4c04bb1a7a
+file.3=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Cae_f6a7ad957ba2f3e849b06b69eadc364d1bb76eb8\\classes.dex
+file.2=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_5887cb097d20dc10cdb8ac7f0efd82159f09fd1a\\classes.dex
+file.1=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\AlsaRecorder_07f85a7b068978f17e3fb8aded4184e43e302b28\\classes.dex
+file.0=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Msc_234512b9b5ce1433c6092026c01dbe4c04bb1a7a\\classes.dex

@@ -1,0 +1,7 @@
+#Wed Jun 14 18:04:52 CST 2017
+base.0=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ebe05fc6120584cde45d86f4a0f2de5f9c9165c1
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f8b94488709caffd1abb941bd7d58b377736c76\\classes.dex
+base.1=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f8b94488709caffd1abb941bd7d58b377736c76
+file.0=E\:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ebe05fc6120584cde45d86f4a0f2de5f9c9165c1\\classes.dex
