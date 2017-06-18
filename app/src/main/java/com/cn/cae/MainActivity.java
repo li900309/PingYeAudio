@@ -28,17 +28,23 @@ import com.iflytek.cloud.UnderstanderResult;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+
+import java.io.IOException;
 
 public class MainActivity extends Activity {
 	final static String TAG = "CAEDemo ";
@@ -55,7 +61,9 @@ public class MainActivity extends Activity {
 	// 多通道原始音频保存路径
 	String mRawAudioDir = "/sdcard/CAERawAudio/";
 
-	TextView mStatus;
+    MediaPlayer hi;
+    MediaPlayer mp = new MediaPlayer();
+    TextView mStatus;
 	TextView mVol;
 	
 	EditText mChannelEdit;
@@ -105,7 +113,13 @@ public class MainActivity extends Activity {
 			
 			mWakeFileUtil.createPcmFile();
 			//mTts.startSpeaking("你好", mTtsListener);
-
+            hi.start();
+            try {
+                Thread.currentThread();
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Log.d(TAG,"开始语义识别");
             int ret;
             ret =  mSpeechUnderstander.startUnderstanding(mSpeechUnderstanderListener);
@@ -124,7 +138,7 @@ public class MainActivity extends Activity {
 				int param2) {
 			Log.d(TAG,"onAudio:"+dataLen);
 			mWakeFileUtil.write(audioData);
-			mIat.writeAudio(audioData,0,dataLen);
+			//mIat.writeAudio(audioData,0,dataLen);
             mSpeechUnderstander.writeAudio(audioData,0,dataLen);
 		}
 	};
@@ -139,9 +153,9 @@ public class MainActivity extends Activity {
 		public void onPcmData(byte[] data, int dataLen) {
 			synchronized (mSyn) {
 				if (null != mCAEEngine) {
-					mRawFileUtil.write(data, 0, dataLen);
+					//mRawFileUtil.write(data, 0, dataLen);
 					mCAEEngine.writeAudio(data, dataLen);
-					Log.d(TAG,"writeAudio:"+dataLen);
+					//Log.d(TAG,"writeAudio:"+dataLen);
 				}
 			}
 		}
@@ -163,6 +177,15 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+        // 禁止休眠
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // 载入欢迎词
+        try {
+            Uri hiPath = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.hello);
+            hi = MediaPlayer.create(this, hiPath);
+	    } catch (Exception e) {
+            Log.d(TAG, "载入欢迎词资源失败");
+        }
 		// 构建资源路径
 		mResPath = ResourceUtil.generateResourcePath(MainActivity.this,
 						RESOURCE_TYPE.assets, "dingdong.jet");
@@ -209,7 +232,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				mStatus.setText("创建对象");
 
-				mCAEEngine = CAEEngine.createInstance("cae_5mic", mResPath);
+				mCAEEngine = CAEEngine.createInstance("cae", mResPath);
 				mCAEEngine.setCAEListener(mCAEListener);
 			}
 		});
@@ -326,7 +349,7 @@ public class MainActivity extends Activity {
 				mWakeFileUtil.closeWriteFile();
 				
 				mRecorder.stopRecording();
-
+				mSpeechUnderstander.stopUnderstanding();
 			}
 		});
 
@@ -488,11 +511,21 @@ public class MainActivity extends Activity {
         mSpeechUnderstander.setParameter(SpeechConstant.ASR_PTT, "1");
 
         // 设置AUDIO_SOURCE From Stream
-        mIat.setParameter(SpeechConstant.AUDIO_SOURCE, "-1");
+        mSpeechUnderstander.setParameter(SpeechConstant.AUDIO_SOURCE, "-1");
         // 设置语义情景
         mSpeechUnderstander.setParameter(SpeechConstant.SCENE, "main");
     }
+    public void plauUri(String uri) {
 
+        try {
+            mp.reset();
+            mp.setDataSource(uri); // 设置数据源  
+            mp.prepare(); // prepare自动播放 
+            mp.start(); //  
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * 听写监听器。
      */
@@ -638,14 +671,24 @@ public class MainActivity extends Activity {
 
         @Override
         public void onResult(final UnderstanderResult result) {
+            JSONObject answer = null;
+            String answerStr;
             if (null != result) {
                 Log.d(TAG, result.getResultString());
 
                 // 显示
                 String text = result.getResultString();
-                if (!TextUtils.isEmpty(text)) {
-                    mVol.setText(text);
+                Log.d("JSON_RAW",text);
+                try {
+                    JSONObject resultJson = new JSONObject(result.getResultString());
+                    answer = resultJson.optJSONObject("answer");
+                    answerStr = answer.getString("text");
+                } catch (Exception e) {
+                    answerStr = "解析语义失败";
                 }
+                Log.d("JSON_ANSWER",answerStr);
+                mTts.startSpeaking(answerStr, mTtsListener);
+
             } else {
                 showTip("识别结果不正确。");
             }
@@ -661,6 +704,7 @@ public class MainActivity extends Activity {
         public void onEndOfSpeech() {
             // 此回调表示：检测到了语音的尾端点，已经进入识别过程，不再接受语音输入
             showTip("结束说话");
+            mWakeFileUtil.closeWriteFile();
         }
 
         @Override

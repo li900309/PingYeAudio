@@ -3,39 +3,39 @@
 
     <item
         is-multidex="false"
-        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Msc.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8e3f2833a2105e4969d12274b94702d7c4047df3">
-        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\Msc_234512b9b5ce1433c6092026c01dbe4c04bb1a7a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\AIUI\CAEDemoDanfeng\app\libs\AlsaRecorder.jar"
+        jar="D:\AIUI\PingYeAudio\app\libs\AlsaRecorder.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="3b5b9de231f71121a214746185d60b9f90cab565">
-        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\AlsaRecorder_07f85a7b068978f17e3fb8aded4184e43e302b28.jar" />
+        <dex dex="D:\AIUI\PingYeAudio\app\build\intermediates\pre-dexed\debug\AlsaRecorder_190123ccbd6b2c482f7ee1094df70df204eb9e8f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\liyunzhi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_5887cb097d20dc10cdb8ac7f0efd82159f09fd1a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\AIUI\CAEDemoDanfeng\app\libs\Cae.jar"
+        jar="D:\AIUI\PingYeAudio\app\libs\Cae.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="ef0ee949e1d31ef5a195e68f1da3f0036a489190">
-        <dex dex="E:\AIUI\CAEDemoDanfeng\app\build\intermediates\pre-dexed\debug\Cae_f6a7ad957ba2f3e849b06b69eadc364d1bb76eb8.jar" />
+        <dex dex="D:\AIUI\PingYeAudio\app\build\intermediates\pre-dexed\debug\Cae_a05eb8dc497926a8709592383d388f2c6e7b45d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AIUI\PingYeAudio\app\libs\Msc.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e3f2833a2105e4969d12274b94702d7c4047df3">
+        <dex dex="D:\AIUI\PingYeAudio\app\build\intermediates\pre-dexed\debug\Msc_1335188b1322d79ae69d6f6c626a75ede48b2dda.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\JAMES\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="D:\AIUI\PingYeAudio\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_aa545c4734bcea51e3b29046fa9bfee4a9a2bb62.jar" />
     </item>
 
 </items>

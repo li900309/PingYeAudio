@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\AIUI\\PingYeAudio\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "D:\\AIUI\\PingYeAudio\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "E:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "E:\\AIUI\\CAEDemoDanfeng\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }
