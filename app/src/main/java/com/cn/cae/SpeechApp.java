@@ -1,6 +1,7 @@
 package com.cn.cae;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.iflytek.cloud.SpeechUtility;
@@ -12,6 +13,7 @@ import com.iflytek.cloud.SpeechUtility;
 public class SpeechApp extends Application {
 
     final static String TAG = "SpeechApp ";
+    private static Context instance;
 
     @Override
     public void onCreate() {
@@ -28,5 +30,11 @@ public class SpeechApp extends Application {
         // 以下句用于设置日志开关（默认开启），设置成false时关闭语音云SDK日志打印
         // Setting.setShowLog(false);
         super.onCreate();
+        instance = getApplicationContext();
+    }
+
+    public static Context getContext()
+    {
+        return instance;
     }
 }

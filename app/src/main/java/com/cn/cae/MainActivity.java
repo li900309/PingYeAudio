@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
 
     //语义理解引擎
     SpeechUnderstander mSpeechUnderstander;
-
+	Understander x = new Understander();
 	CAEListener mCAEListener = new CAEListener() {
 
 		@Override
@@ -110,9 +110,8 @@ public class MainActivity extends Activity {
 			Log.d(TAG,"唤醒成功");
 			mRawFileUtil.closeWriteFile();
 			mRawFileUtil.createPcmFile();
-			
 			mWakeFileUtil.createPcmFile();
-			//mTts.startSpeaking("你好", mTtsListener);
+			x.mediaPause();
             hi.start();
             try {
                 Thread.currentThread();
@@ -648,6 +647,7 @@ public class MainActivity extends Activity {
 		public void onCompleted(SpeechError error) {
 			if (error == null) {
 				showTip("播放完成");
+				x.mediaStart();
 			} else if (error != null) {
 				showTip(error.getPlainDescription(true));
 			}
@@ -686,8 +686,16 @@ public class MainActivity extends Activity {
                 } catch (Exception e) {
                     answerStr = "解析语义失败";
                 }
+				mTts.startSpeaking(answerStr, mTtsListener);
+				try {
+					Thread.currentThread();
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+                x.parseResult(result.getResultString());
                 Log.d("JSON_ANSWER",answerStr);
-                mTts.startSpeaking(answerStr, mTtsListener);
+
 
             } else {
                 showTip("识别结果不正确。");
