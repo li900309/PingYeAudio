@@ -130,6 +130,23 @@ public class Understander {
 
         switch (res.service) {
             case "news":
+                playList.clear();
+                // 根据 Service 类型处理 data 字段
+                if (res.data == null) {
+                    Log.e(TAG,"返回数据为空");
+                    return -1;
+                }
+                dataResult = res.data.optJSONArray("result");
+                for (int i = 0; i < dataResult.length(); i++ ){
+                    JSONObject t = dataResult.optJSONObject(i);
+                    if (t != null) {
+                        String playUrl = t.optString("url");
+                        if (playUrl == null)
+                            continue;
+                        playList.addLast(playUrl);
+                    }
+                }
+                checkMediaPlayList();
                 break;
             case "story":
                 playList.clear();

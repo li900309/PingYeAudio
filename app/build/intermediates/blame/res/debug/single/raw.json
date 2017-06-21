@@ -2,5 +2,9 @@
     {
         "merged": "D:\\AIUI\\PingYeAudio\\app\\build\\intermediates\\res\\merged\\debug\\raw\\hello.wav",
         "source": "D:\\AIUI\\PingYeAudio\\app\\src\\main\\res\\raw\\hello.wav"
+    },
+    {
+        "merged": "E:\\AIUI\\CAEDemoDanfeng\\app\\build\\intermediates\\res\\merged\\debug\\raw\\hello.wav",
+        "source": "E:\\AIUI\\CAEDemoDanfeng\\app\\src\\main\\res\\raw\\hello.wav"
     }
 ]
