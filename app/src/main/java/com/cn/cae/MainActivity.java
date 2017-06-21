@@ -672,7 +672,7 @@ public class MainActivity extends Activity {
         @Override
         public void onResult(final UnderstanderResult result) {
             JSONObject answer = null;
-            String answerStr;
+            String answerStr = "";
             if (null != result) {
                 Log.d(TAG, result.getResultString());
 
@@ -681,10 +681,15 @@ public class MainActivity extends Activity {
                 Log.d("JSON_RAW",text);
                 try {
                     JSONObject resultJson = new JSONObject(result.getResultString());
+					String rc = resultJson.getString("rc");
+					if (rc != "0") {
+						answerStr = "解析语义失败";
+					}
                     answer = resultJson.optJSONObject("answer");
-                    answerStr = answer.getString("text");
+					if (answer != null)
+                    	answerStr = answer.getString("text");
                 } catch (Exception e) {
-                    answerStr = "解析语义失败";
+					e.printStackTrace();
                 }
 				mTts.startSpeaking(answerStr, mTtsListener);
 				try {
